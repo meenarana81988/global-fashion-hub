@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Global Fashion Hub - B2B clothing import export marketplace for buyers, suppliers, wholesalers and manufacturers worldwide.">
+  <title>Global Fashion Hub | Clothing Import Export Marketplace</title>
+  <link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+<header class="header">
+  <div class="container nav">
+    <a class="brand" href="#home">
+      <span class="logo">GFH</span>
+      <span><b>Global Fashion Hub</b><small>Clothing Import • Export • Wholesale</small></span>
+    </a>
+    <button id="menuBtn" class="menu">☰</button>
+    <nav id="navLinks">
+      <a href="#categories">Categories</a>
+      <a href="#products">Products</a>
+      <a href="#suppliers">Suppliers</a>
+      <a href="#rfq">Post RFQ</a>
+      <a href="#contact">Contact</a>
+      <button class="btn light" id="loginBtn">Login</button>
+      <button class="btn primary" id="registerBtn">Register</button>
+    </nav>
+  </div>
+</header>
+
+<main id="home">
+<section class="hero">
+  <div class="container hero-grid">
+    <div>
+      <span class="tag">GLOBAL B2B FASHION MARKETPLACE</span>
+      <h1>Buy and sell clothing worldwide.</h1>
+      <p>Connect with garment manufacturers, exporters, importers, wholesalers and verified buyers.</p>
+      <div class="actions">
+        <a class="btn primary" href="#products">Explore Products</a>
+        <a class="btn outline" href="#rfq">Post Buying Requirement</a>
+      </div>
+      <div class="stats">
+        <div><strong>25+</strong><span>Countries</span></div>
+        <div><strong>150+</strong><span>Suppliers</span></div>
+        <div><strong>1000+</strong><span>Products</span></div>
+      </div>
+    </div>
+    <div class="panel">
+      <h3>Quick Product Search</h3>
+      <label>Product<input id="heroSearch" placeholder="T-shirts, sarees, jeans..."></label>
+      <label>Category<select id="heroCategory">
+        <option value="">All Categories</option>
+        <option>Men's Wear</option><option>Women's Wear</option><option>Kids Wear</option>
+        <option>Traditional Wear</option><option>Sportswear</option><option>Fabric & Textile</option>
+      </select></label>
+      <button id="heroSearchBtn" class="btn primary full">Search Products</button>
+      <p class="small-text">Free inquiry • Verified suppliers • Mobile friendly</p>
+    </div>
+  </div>
+</section>
+
+<section id="categories" class="section">
+  <div class="container">
+    <span class="tag">CATEGORIES</span><h2>Popular clothing categories</h2>
+    <div class="category-grid">
+      <button data-category="Men's Wear">👔<b>Men's Wear</b><small>Shirts, jeans, suits</small></button>
+      <button data-category="Women's Wear">👗<b>Women's Wear</b><small>Dresses, tops, western</small></button>
+      <button data-category="Kids Wear">🧒<b>Kids Wear</b><small>Baby and children clothing</small></button>
+      <button data-category="Traditional Wear">🥻<b>Traditional Wear</b><small>Sarees, kurtis, ethnic wear</small></button>
+      <button data-category="Sportswear">🏃<b>Sportswear</b><small>Activewear and uniforms</small></button>
+      <button data-category="Fabric & Textile">🧵<b>Fabric & Textile</b><small>Cotton, silk and blends</small></button>
+    </div>
+  </div>
+</section>
+
+<section id="products" class="section alt">
+  <div class="container">
+    <div class="section-head"><div><span class="tag">FEATURED PRODUCTS</span><h2>Wholesale products</h2></div>
+    <input id="productSearch" class="search" placeholder="Search products..."></div>
+    <div id="productGrid" class="product-grid"></div>
+  </div>
+</section>
+
+<section id="suppliers" class="section">
+  <div class="container">
+    <span class="tag">SUPPLIERS</span><h2>Verified clothing suppliers</h2>
+    <div class="supplier-grid">
+      <article><div class="avatar">AT</div><div><h3>Aarav Textiles</h3><p>India • Cotton garments</p><span>✓ Verified Supplier</span></div></article>
+      <article><div class="avatar">EF</div><div><h3>Elite Fashions</h3><p>Bangladesh • T-shirts & knitwear</p><span>✓ Verified Supplier</span></div></article>
+      <article><div class="avatar">MT</div><div><h3>Moda Trade</h3><p>Turkey • Women's apparel</p><span>✓ Verified Supplier</span></div></article>
+    </div>
+  </div>
+</section>
+
+<section id="rfq" class="section dark">
+  <div class="container two-col">
+    <div>
+      <span class="tag light-tag">REQUEST FOR QUOTATION</span>
+      <h2>Post your buying requirement</h2>
+      <p>Send complete product requirements to suppliers and receive quotations by email or WhatsApp.</p>
+      <ul>
+        <li>Bulk and sample order inquiry</li>
+        <li>MOQ and price negotiation</li>
+        <li>International shipping requirements</li>
+      </ul>
+    </div>
+    <form id="rfqForm" class="panel">
+      <div class="form-grid">
+        <label>Full Name*<input name="name" required></label>
+        <label>Mobile / WhatsApp*<input name="mobile" type="tel" required placeholder="+91..."></label>
+        <label>Email Address*<input name="email" type="email" required></label>
+        <label>Company Name<input name="company"></label>
+        <label>Country*<input name="country" required></label>
+        <label>Business Type*<select name="businessType" required>
+          <option value="">Select</option><option>Buyer</option><option>Importer</option>
+          <option>Wholesaler</option><option>Retailer</option><option>Distributor</option>
+        </select></label>
+      </div>
+      <label>Product Required*<input name="product" required placeholder="Example: 5000 cotton T-shirts"></label>
+      <div class="form-grid">
+        <label>Quantity / MOQ*<input name="quantity" required></label>
+        <label>Destination Country*<input name="destination" required></label>
+      </div>
+      <label>Requirement Details<textarea name="details" rows="4" placeholder="Sizes, colors, fabric, delivery date, packaging..."></textarea></label>
+      <label class="check"><input type="checkbox" required> I agree to the Privacy Policy and allow suppliers to contact me.</label>
+      <button class="btn primary full" type="submit">Submit RFQ</button>
+      <p id="rfqMessage" class="success"></p>
+    </form>
+  </div>
+</section>
+
+<section id="contact" class="section alt">
+  <div class="container contact-grid">
+    <div>
+      <span class="tag">CONTACT</span><h2>Contact Global Fashion Hub</h2>
+      <p><b>Business Name:</b> Global Fashion Hub</p>
+      <p><b>Email:</b> info@globalfashionhub.com</p>
+      <p><b>Mobile / WhatsApp:</b> Add your business number</p>
+      <p><b>Office Address:</b> Add your office address</p>
+    </div>
+    <a class="whatsapp" href="https://wa.me/" target="_blank">💬 WhatsApp Inquiry</a>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <span class="tag">LEGAL</span><h2>Privacy and data notice</h2>
+    <div class="legal-box">
+      <p>This demo collects form information only inside the browser and does not send it to a server. Before launching a real website, connect a secure backend, enable HTTPS, add a complete Privacy Policy, Terms & Conditions and user consent.</p>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="container footer-grid">
+    <div><h3>Global Fashion Hub</h3><p>B2B clothing import export marketplace.</p></div>
+    <div><b>Marketplace</b><a href="#products">Products</a><a href="#suppliers">Suppliers</a><a href="#rfq">Post RFQ</a></div>
+    <div><b>Account</b><a href="#" id="footerLogin">Login</a><a href="#" id="footerRegister">Register</a></div>
+  </div>
+  <p class="copy">© 2026 Global Fashion Hub. All rights reserved.</p>
+</footer>
+
+<div id="accountModal" class="modal">
+  <div class="modal-box">
+    <button id="closeModal" class="close">×</button>
+    <h2 id="modalTitle">Login</h2>
+    <div class="tabs"><button class="tab active" data-tab="login">Login</button><button class="tab" data-tab="register">Register</button></div>
+
+    <form id="loginForm" class="account-form">
+      <label>Email or Mobile*<input required></label>
+      <label>Password*<input type="password" required></label>
+      <button class="btn primary full" type="submit">Login</button>
+    </form>
+
+    <form id="registerForm" class="account-form hidden">
+      <div class="form-grid">
+        <label>Full Name*<input name="fullName" required></label>
+        <label>Mobile / WhatsApp*<input name="mobile" type="tel" required></label>
+        <label>Email Address*<input name="email" type="email" required></label>
+        <label>Company Name<input name="company"></label>
+        <label>Country*<input name="country" required></label>
+        <label>Account Type*<select name="accountType" required>
+          <option value="">Select</option><option>Buyer</option><option>Supplier</option><option>Buyer & Supplier</option>
+        </select></label>
+        <label>Password*<input name="password" type="password" minlength="6" required></label>
+        <label>Confirm Password*<input name="confirmPassword" type="password" minlength="6" required></label>
+      </div>
+      <label class="check"><input type="checkbox" required> I agree to the Terms and Privacy Policy.</label>
+      <button class="btn primary full" type="submit">Create Account</button>
+    </form>
+    <p class="small-text">Demo only. Real login, OTP, email verification and database require a secure backend.</p>
+  </div>
+</div>
+
+<script src="assets/app.js"></script>
+</body>
+</html>
